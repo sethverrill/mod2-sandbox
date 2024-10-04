@@ -14,14 +14,14 @@ function printGreeting(greeting) {
   console.log(greeting)
 }
 
-    // printGreeting('hi')  
+    printGreeting('hi')  
     
-    // printGreeting('sup')
+    printGreeting('sup')
     
-    // printGreeting('oh hello there darling!')
+    printGreeting('oh hello there darling!')
     
 // Now call the function again yourself, passing through whatever greeting you'd like.  Make sure you pass the greeting as a string (it must be in quotes).
-
+    printGreeting('Howdy')
 
 
 // Lesson Example 2
@@ -38,9 +38,9 @@ var supGreeting = captureGreeting('sup')
 
 var fancyGreeting = captureGreeting('oh hello there darling!')
 
-// console.log('hiGreeting: ', hiGreeting)
-// console.log('supGreeting: ', supGreeting)
-// console.log('fancyGreeting: ', fancyGreeting)
+console.log('hiGreeting: ', hiGreeting)
+console.log('supGreeting: ', supGreeting)
+console.log('fancyGreeting: ', fancyGreeting)
 
 
 
@@ -54,28 +54,48 @@ var captureGreetingArrowSyntax = (greeting) => {
 
 var helloGreeting = captureGreetingArrowSyntax('hello')  
 
-// console.log("helloGreeting: ", helloGreeting)
+console.log("helloGreeting: ", helloGreeting)
 
 
 // NOTE FOR THE EXERCISES BELOW: "print" or "log" both mean to use a console.log()
 
 /*  -- SECTION A: PRACTICING FUNCTIONS STRAIGHT UP -- */
 //1A. Make a function called sayName that logs your first name
-
+      function sayName(firstname) { 
+        console.log(firstname) }
+      var myname = sayName('Seth')
 
 //2A. Edit the sayName function above to create a variable inside of the function that is equal to a greeting. Change the console log to include the greeting concatenated with your name!
-
+      function sayName(firstname) {
+        let greeting = "Ohhhh, Hello, "; 
+        console.log(greeting + firstname) }
+      var myname = sayName('Seth')
 
 //3A. Make a function called watchShow that console logs "I am watching". Then call the logFavoriteMovie function after the console log.
-
+        function watchShow() {
+          return 'I am watching '
+        }
+        
+        function logFavoriteMovie(movie) {
+          return 'Ikiru'
+        }
+        console.log(`${watchShow()} ${logFavoriteMovie()}`)
 
 /*  --  SECTION B: FUNCTIONS WITH PARAMETERS. -- */
 //1B. Create a function takes in two numbers and logs the numbers added together. Invoke the function two times with different numbers.
-
+        function addnums(num1, num2) {
+          let sum = num1 + num2;
+          console.log(sum)
+        }
+        addnums(55, 23)
+        addnums(107, 333)
 
 //2B. Create a function that takes in first name and last name and logs a greeting that greets somebody by first and last name. Call the function two times with different names.
-
-
+        function greet(firstName, lastName) {
+          console.log(`Howdy, ${firstName} ${lastName}! We're thrilled to make your acquaintance!`)
+        }
+        greet("Timmony", "Thompson")
+        greet("Greta", "Gringle")
 
 /*  -- SECTION C: FUNCTIONS WITH RETURNS, ARGS and PARAMS -- */
 //1C. Make a function that takes in two numbers as arguments and returns the sum of those two numbers. 
